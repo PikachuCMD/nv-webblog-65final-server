@@ -5,7 +5,7 @@ module.exports = {
     async create(req, res) {
         try {
             const camera = await Camera.create(req.body)
-            res.send(user.toJSON())
+            res.send(camera.toJSON())
         } catch (err) {
             res.status(500).send({
                 error: 'Create Camera incorrect'
